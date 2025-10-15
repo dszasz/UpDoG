@@ -9,8 +9,17 @@
 #SBATCH --partition=normal             # Queue/partition to use
 #SBATCH --mail-type=END
 
-
 conda activate qiime2-moshpit-2025.7
+
+#some paths
+home_dir = /cluster/home/clambert/$USER
+scratch_dir = /cluster/scratch/$USER/updog
+
+#new dirrectory only for the first job
+mkdir -p /cluster/scratch/$USER/updog/results
+
+cd $scratch_dir
+
 
 # ----- add script here -------
 
