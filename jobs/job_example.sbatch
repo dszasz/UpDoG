@@ -17,7 +17,7 @@ module load eth_proxy
 
 #some paths
 home_dir = /cluster/home/clambert/$USER
-scratch_dir = /cluster/scratch/$USER/updog
+data_dir = /cluster/scratch/$USER/updog
 
 #new dirrectory only for the first job
 mkdir -p /cluster/scratch/$USER/updog/results
