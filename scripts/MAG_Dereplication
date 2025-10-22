@@ -1,1 +1,27 @@
+# 5. MAG dereplication
+
+# We will use sourmash to compare and dereplicate our MAGs
+
+# Step 1: Compute MinHash signatures for each MAG
+! qiime sourmash compute \
+    --i-sequence-file $data_dir/mags-filtered.qza \
+    --p-ksizes 105 \
+    --p-scaled 100 \
+    --o-min-hash-signature $data_dir/mags-hashes.qza
+
+# Step 2: Compare all MAGs to compute pairwise distances
+! qiime sourmash compare \
+    --i-min-hash-signature $data_dir/mags-hashes.qza \
+    --p-ksize 105 \
+    --o-compare-output $data_dir/mags-dist.qza
+
+# Step 3: Dereplicate based on completeness (from BUSCO results)
+! qiime annotate dereplicate-mags \
+    --i-mags $data_dir/mags-filtered.qza \
+    --i-distance-matrix $data_dir/mags-dist.qza \
+    --m-metadata-file $data_dir/busco-results.qza \
+    --m-metadata-column "completeness" \
+    --p-threshold 0.7 \
+    --o-dereplicated-mags $data_dir/mags-derep.qza \
+    --o-table $data_dir/mags-table-pa.qza
 
