@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=MAGs_qc_2       # A short name for your job
-#SBATCH --output=logs/output_MAGs_qc_2_%j.log         # Output file (%j adds the job ID)
-#SBATCH --error=logs/error_MAGs_qc_2_%j.log           # Error file
+#SBATCH --job-name=MAGs_qc_4       # A short name for your job
+#SBATCH --output=logs/output_MAGs_qc_4_%j.log         # Output file (%j adds the job ID)
+#SBATCH --error=logs/error_MAGs_qc_4_%j.log           # Error file
 #SBATCH --time=4:00:00                # Time limit (hh:mm:ss)
 #SBATCH --ntasks=1                     # Number of tasks (1 = single process)
 #SBATCH --cpus-per-task=1              # Number of CPUs
@@ -28,6 +28,10 @@ cd $data_dir
 
 # ----- add script here -------
 
-qiime annotate fetch-busco-db \
-  --p-lineages fungi_odb12 \
-  --o-db $data_dir/busco-db-fungi.qza
+qiime annotate evaluate-busco \
+    --i-mags $data_dir/updog_mags_131025.qza \
+    --i-db $data_dir/busco-db-bacteria.qza \
+    --p-lineage-dataset bacteria_odb12 \
+    --p-cpu 3 \
+    --o-results $data_dir/busco-results-bacteria.qza \
+    --o-visualization $data_dir/mags-busco-bacteria.qzv

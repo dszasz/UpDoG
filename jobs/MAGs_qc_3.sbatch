@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=MAGs_qc_3       # A short name for your job
-#SBATCH --output=scripts/logs/output_MAGs_qc_3_%j.log         # Output file (%j adds the job ID)
-#SBATCH --error=scripts/logs/error_MAGs_qc_3_%j.log           # Error file
+#SBATCH --output=logs/output_MAGs_qc_3_%j.log         # Output file (%j adds the job ID)
+#SBATCH --error=logs/error_MAGs_qc_3_%j.log           # Error file
 #SBATCH --time=4:00:00                # Time limit (hh:mm:ss)
 #SBATCH --ntasks=1                     # Number of tasks (1 = single process)
 #SBATCH --cpus-per-task=1              # Number of CPUs
