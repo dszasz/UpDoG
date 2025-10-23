@@ -17,7 +17,7 @@ conda activate qiime2-moshpit-2025.7
 module load eth_proxy
 
 #some paths
-home_dir = /cluster/home/clambert/$USER
+home_dir = /cluster/home/$USER
 data_dir = /cluster/scratch/$USER/updog
 
 #new dirrectory only for the first job
