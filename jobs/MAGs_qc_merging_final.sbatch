@@ -30,5 +30,5 @@ cd $data_dir
 qiime feature-table merge \
   --i-tables $data_dir/mags_filtered_bacteria_50.qza \
   --i-tables $data_dir/mags_filtered_archaea_50.qza \
-  --i-tables $data_dir/mags_filtered_fungi_50.qza \
+  --i-tables $data_dir/mags_filtered_all_fungi.qza \
   --o-merged-table $data_dir/mags_filtered_all_50.qza
