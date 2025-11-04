@@ -28,7 +28,7 @@ cd $data_dir
 ! qiime annotate classify-kraken2 \
     --i-seqs $data_dir/mags_derep_all_domains.qza \
     --i-db $data_dir/kraken2_db.qza \
-    --p-threads 40 \
+    --p-threads 30 \
     --p-confidence 0.5 \
     --p-memory-mapping False \
     --p-report-minimizer-data \
