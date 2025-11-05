@@ -26,6 +26,6 @@ data_dir = /cluster/scratch/$USER/updog
 cd $data_dir
 
 qiime demux partition-samples-paired \
-  --i-mags $data_dir/updog_seqs.qza \
+  --i-demux $data_dir/updog_seqs.qza \
   --p-num-partitions 10 \
   --o-partitioned-demux partitioned_seqs
