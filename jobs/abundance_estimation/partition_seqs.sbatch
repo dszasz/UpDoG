@@ -17,15 +17,15 @@ conda activate qiime2-moshpit-2025.7
 module load eth_proxy
 
 #some paths
-home_dir = /cluster/home/$USER
-data_dir = /cluster/scratch/$USER/updog/scripts
+home_dir="/cluster/home/$USER"
+data_dir="/cluster/scratch/$USER/updog/scripts"
 
 #new dirrectory only for the first job
 #mkdir -p /cluster/scratch/$USER/updog/results
 
-cd $data_dir
+cd "$data_dir"
 
 qiime demux partition-samples-paired \
-  --i-demux $data_dir/updog_seqs.qza \
+  --i-demux "$data_dir/updog_seqs.qza" \
   --p-num-partitions 10 \
   --o-partitioned-demux partitioned_seqs
