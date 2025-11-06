@@ -26,5 +26,5 @@ cd $data_dir
 
 qiime types partition-sample-data-mags \
   --i-mags updog_mags.qza \
-  --p-num-partitions 128 \
+  --p-num-partitions 126 \
   --o-partitioned-mags busco_inputs/updog_mags_partitions
