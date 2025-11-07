@@ -5,7 +5,7 @@
 #SBATCH --time=2-00:00:00                # Time limit (hh:mm:ss)
 #SBATCH --ntasks=1                     # Number of tasks (1 = single process)
 #SBATCH --cpus-per-task=8              # Number of CPUs
-#SBATCH --mem-per-cpu=64G                       # Memory (1 gigabyte)
+#SBATCH --mem-per-cpu=8G                       # Memory (1 gigabyte)
 #SBATCH --partition=normal             # Queue/partition to use
 #SBATCH --mail-type=END
 
