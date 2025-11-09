@@ -27,7 +27,7 @@ cd "$data_dir"
 
 mosh assembly map-reads \
     --i-index "$data_dir/mags_derep_all_domains_index.qza" \
-    --i-reads "$data_dir/partitioned_seqs.qza" \
+    --i-reads "$data_dir/partitioned_seqs/seqs_1.qza" \
     --p-threads 8 \
     --p-seed 100 \
-    --o-alignment-maps reads_to_derep_mags \
+    --o-alignment-maps reads_to_derep_mags_1 \
