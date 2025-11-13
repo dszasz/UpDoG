@@ -28,7 +28,7 @@ cd "$data_dir"
 mosh annotate estimate-abundance \
     --i-feature-lengths "$data_dir/results/mags_derep_all_domains_length.qza" \
     --i-alignment-maps "$data_dir/reads_to_derep_mags/reads_to_derep_mags_1.qza" \
-    --p-threads 10 \
+    --p-threads 16 \
     --p-metric "tpm" \
     --p-min-mapq 42 \
     --o-abundances mags_derep_ft_1 \
