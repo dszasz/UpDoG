@@ -4,8 +4,8 @@
 #SBATCH --error=logs/error_map-reads%j.log           # Error file
 #SBATCH --time=2-00:00:00                # Time limit (hh:mm:ss)
 #SBATCH --ntasks=1                     # Number of tasks (1 = single process)
-#SBATCH --cpus-per-task=16              # Number of CPUs
-#SBATCH --mem-per-cpu=8G                       # Memory (1 gigabyte)
+#SBATCH --cpus-per-task=8              # Number of CPUs
+#SBATCH --mem-per-cpu=4G                       # Memory (1 gigabyte)
 #SBATCH --partition=normal             # Queue/partition to use
 #SBATCH --mail-type=END
 
@@ -25,9 +25,10 @@ data_dir="/cluster/scratch/$USER/updog/scripts"
 
 cd "$data_dir"
 
-mosh assembly map-reads \
-    --i-index "$data_dir/mags_derep_all_domains_index.qza" \
-    --i-reads "$data_dir/partitioned_seqs/seqs_1.qza" \
-    --p-threads 16 \
-    --p-seed 100 \
-    --o-alignment-maps reads_to_derep_mags_1 \
+mosh annotate estimate-abundance \
+    --i-feature-lengths "$data_dir/mags_derep_all_domains_length.qza" \
+    --i-alignment-maps "$data_dir/reads_to_derep_mags.qza" \
+    --p-threads 10 \
+    --p-metric tpm \
+    --p-min-mapq 42 \
+    --o-abundances mags_derep_ft \
