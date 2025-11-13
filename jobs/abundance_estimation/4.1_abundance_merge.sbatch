@@ -26,14 +26,14 @@ data_dir="/cluster/scratch/$USER/updog/results/mags_derep_ft"
 cd "$data_dir"
 
 qiime feature-table merge \
-  --i-tables "$data_dir mags_derep_ft_1.qza \
-              mags_derep_ft_2.qza \
-              mags_derep_ft_3.qza \
-              mags_derep_ft_4.qza \
-              mags_derep_ft_5.qza \
-              mags_derep_ft_6.qza \
-              mags_derep_ft_7.qza \
-              mags_derep_ft_8.qza \
-              mags_derep_ft_9.qza \
-              mags_derep_ft_10.qza" \
-  --o-merged-table mags_derep_ft_merged.qza
+  --i-tables "$data_dir/mags_derep_ft_1.qza" \
+  --i-tables "$data_dir/mags_derep_ft_2.qza" \
+  --i-tables "$data_dir/mags_derep_ft_3.qza" \
+  --i-tables "$data_dir/mags_derep_ft_4.qza" \
+  --i-tables "$data_dir/mags_derep_ft_5.qza" \
+  --i-tables "$data_dir/mags_derep_ft_6.qza" \
+  --i-tables "$data_dir/mags_derep_ft_7.qza" \
+  --i-tables "$data_dir/mags_derep_ft_8.qza" \
+  --i-tables "$data_dir/mags_derep_ft_9.qza" \
+  --i-tables "$data_dir/mags_derep_ft_10.qza" \
+  --o-merged-table "$data_dir/mags_derep_ft_merged.qza"
