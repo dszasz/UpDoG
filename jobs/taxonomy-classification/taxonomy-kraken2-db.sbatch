@@ -26,7 +26,7 @@ cd $data_dir
 
 #script
 mosh annotate build-kraken-db \
-    --p-collection pluspf \
-    --o-kraken2-db $data_dir/kraken2_db \
-    --o-bracken-db $data_dir/bracken_db \
+    --p-collection pluspf16 \
+    --o-kraken2-db $data_dir/kraken2_db16 \
+    --o-bracken-db $data_dir/bracken_db16 \
  

@@ -25,13 +25,10 @@ data_dir=/cluster/scratch/$USER/updog
 cd $data_dir
 
 #script
-! qiime annotate classify-kraken2 \
+mosh annotate classify-kraken2 \
     --i-seqs $data_dir/mags_derep_all_domains.qza \
-    --i-db $data_dir/kraken2_db.qza \
+    --i-db $data_dir/kraken2_db16.qza \
     --p-threads 30 \
-    --p-confidence 0.5 \
     --p-memory-mapping False \
-    --p-report-minimizer-data \
-    --o-reports $data_dir/kraken2-reports-mags.qza \
-    --o-outputs $data_dir/kraken2-hits-mags.qza
-    --verbose
+    --o-reports $data_dir/kraken2-reports-mags_db16.qza \
+    --o-outputs $data_dir/kraken2-hits-mags_db16.qza

@@ -25,7 +25,8 @@ data_dir=/cluster/scratch/$USER/updog
 cd $data_dir
 
 #script
-! qiime annotate kraken2-to-mag-features \
-    --i-reports $data_dir/kraken2-reports-mags.qza \
-    --i-outputs $data_dir/kraken2-hits-mags.qza \
-    --o-taxonomy $data_dir/mags-taxonomy.qza
+mosh annotate kraken2-to-mag-features \
+    --i-reports $data_dir/kraken2-reports-mags_db16.qza \
+    --i-outputs $data_dir/kraken2-hits-mags_db16.qza \
+    --o-taxonomy $data_dir/mags-taxonomy.qza\
+    --verbose
