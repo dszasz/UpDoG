@@ -26,7 +26,7 @@ cd $data_dir
 
 #script
 mosh annotate kraken2-to-mag-features \
-    --i-reports $data_dir/kraken2-reports-mags_db16.qza \
-    --i-outputs $data_dir/kraken2-hits-mags_db16.qza \
-    --o-taxonomy $data_dir/mags-taxonomy.qza\
+    --i-reports $data_dir/kraken2-reports-mags_db16_filtered-1.qza \
+    --i-outputs $data_dir/kraken2-hits-mags_db16_filtered-1.qza \
+    --o-taxonomy $data_dir/mags-taxonomy-db16-filtered.qza\
     --verbose
