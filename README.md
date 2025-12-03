@@ -58,9 +58,8 @@ Jupyter notebooks documenting each stage of the MAG workflow.
 3. **mags_taxonomy_classification.ipynb**
 4. **functional_annotation.ipynb** (can be done in parallel)
 5. **abundance_estimation.ipynb**
-6. **taxonomy_analysis.ipynb**
-7. **alpha_beta_diversity.ipynb**
-8. **differential_abundance_analysis**
+6. **alpha_beta_diversity.ipynb**
+7. **differential_abundance_analysis**
 
 
 
