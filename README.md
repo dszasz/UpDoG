@@ -20,6 +20,9 @@ Slurm job files and directories containing the cluster jobs for each MAG-process
 * **abundance_estimation/**
   Jobs producing per-sample MAG abundance profiles.
 
+* **functional_annotation/**
+  Jobs to identify and classify of the genes in the MAGs.
+
 * **job_example.sbatch**
   Minimal template showing the structure of an Euler Slurm submission.
 
@@ -56,11 +59,12 @@ Jupyter notebooks documenting each stage of the MAG workflow.
 1. **mags_qc.ipynb**
 2. **mags_dereplication.ipynb**
 3. **mags_taxonomy_classification.ipynb**
-4. **functional_annotation.ipynb** (can be done in parallel)
-5. **abundance_estimation.ipynb**
+4. **abundance_estimation.ipynb**
+5. **functional_annotation.ipynb** 
 6. **alpha_beta_diversity.ipynb**
 7. **differential_abundance_analysis**
-
+8. **ML_classifier**
+9. **protein_identification**
 
 
 
