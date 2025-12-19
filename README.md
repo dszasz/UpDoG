@@ -30,6 +30,9 @@ Slurm job files and directories containing the cluster jobs for each MAG-process
 
 Jupyter notebooks documenting each stage of the MAG workflow.
 
+* **metadata_visualizations.ipynb**
+  Generation of visualization of the obtained sample metadata.
+
 * **mags_qc.ipynb**
   Quality control and selection of MAGs.
 
