@@ -59,15 +59,16 @@ Jupyter notebooks documenting each stage of the MAG workflow.
 
 ## Recommended Notebook Order
 
-1. **mags_qc.ipynb**
-2. **mags_dereplication.ipynb**
-3. **mags_taxonomy_classification.ipynb**
-4. **abundance_estimation.ipynb**
-5. **functional_annotation.ipynb** 
-6. **alpha_beta_diversity.ipynb**
-7. **differential_abundance_analysis**
-8. **ML_classifier**
-9. **protein_identification**
+1. **metadata_visualizations.ipynb**
+2. **mags_qc.ipynb**
+3. **mags_dereplication.ipynb**
+4. **mags_taxonomy_classification.ipynb**
+5. **abundance_estimation.ipynb**
+6. **functional_annotation.ipynb** 
+7. **alpha_beta_diversity.ipynb**
+8. **differential_abundance_analysis**
+9. **ML_classifier**
+10. **protein_identification**
 
 
 
